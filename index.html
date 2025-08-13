@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kalkulator Interaktif</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="">
+  <div class="app" role="application" aria-label="Kalkulator Interaktif">
+    <section class="calc" aria-labelledby="title">
+      <div class="topbar">
+        <div class="brand" id="title">Kalkulator</div>
+        <div class="actions">
+          <span class="badge">⌨ Dukungan Keyboard</span>
+          <button class="btn" id="themeBtn">☀ / 🌙</button>
+          <button class="btn" id="copyBtn">Salin</button>
+        </div>
+      </div>
+
+      <div class="display" aria-live="polite">
+        <div class="expr" id="expr">0</div>
+        <div class="result" id="result">0</div>
+      </div>
+
+      <div class="grid" role="group" aria-label="Tombol kalkulator">
+        <div class="key danger" data-act="clear">AC</div>
+        <div class="key danger" data-act="del">DEL</div>
+        <div class="key op" data-key="%">%</div>
+        <div class="key op" data-key="/">÷</div>
+
+        <div class="key" data-key="7">7</div>
+        <div class="key" data-key="8">8</div>
+        <div class="key" data-key="9">9</div>
+        <div class="key op" data-key="*">×</div>
+
+        <div class="key" data-key="4">4</div>
+        <div class="key" data-key="5">5</div>
+        <div class="key" data-key="6">6</div>
+        <div class="key op" data-key="-">−</div>
+
+        <div class="key" data-key="1">1</div>
+        <div class="key" data-key="2">2</div>
+        <div class="key" data-key="3">3</div>
+        <div class="key op" data-key="+">+</div>
+
+        <div class="key" data-act="neg">±</div>
+        <div class="key" data-key="0">0</div>
+        <div class="key" data-key=".">.</div>
+        <div class="key eq" data-act="eq">=</div>
+      </div>
+    </section>
+
+    <aside class="sidebar" aria-label="Riwayat Perhitungan">
+      <div class="side-head">
+        <h3>Riwayat</h3>
+      </div>
+      <div id="history" class="history" aria-live="polite">
+        <div class="muted">Belum ada perhitungan.</div>
+      </div>
+    </aside>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
